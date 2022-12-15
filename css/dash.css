@@ -1,0 +1,147 @@
+/* tags */ 
+
+body {
+    overflow: auto;
+}
+
+main {
+    margin: 2em;
+}
+
+footer {
+    width: 100%;
+    background: linear-gradient(var(--primary) 50%, #34064d);
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    height: 40px;
+}
+
+footer a {
+    margin-top: -20px;
+}
+
+footer i {
+    font-size: 40px;
+    filter: drop-shadow(5px 5px 30px black);
+}
+
+footer i:not(.selected) {
+    background: linear-gradient(var(--primary), var(--secundary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer i.selected {
+    color: white;
+}
+
+footer i.disabled {
+    background: linear-gradient(gray 70%, rgb(80, 80, 80));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer a.selected {
+    background: white !important;
+}
+
+/* id */
+
+#entradasTitle {
+    background: linear-gradient(var(--secundary), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#saidasTitle {
+    background: linear-gradient(var(--primary), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#verMaisBTN {
+    width: 100px;
+    margin: -5px 5px;
+    position: absolute;
+    right: 0;
+    bottom: -38px;
+}
+
+/*
+#entradasContent {
+    border-radius: 0 0 0 20px;
+    border-bottom: 1px solid var(--secundary);
+}
+
+#saidasContent {
+    border-radius: 0 0 20px 0;
+    border-bottom: 1px solid var(--primary);
+}*/
+
+#saldoCarteira p {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+#saldoTitle {
+    display: inline;
+}
+
+#bc {
+    background: gray;
+    padding: 5px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-top: -15px;
+}
+
+#bc img{
+    transform: rotate(-45deg);
+}
+
+#chartDiv {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* classes */
+
+.content {
+    padding: 10px;
+    min-height: 130px;
+}
+
+.content p {
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.green {
+    background: linear-gradient(180deg, green, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.purple {
+    background: linear-gradient(180deg, var(--primary), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.white {
+    color: white;
+}
+
+.blue {
+    background-image: linear-gradient(to right, var(--secundary), transparent);
+}
+
+.icon {
+    font-size: 1.3em;
+}
+
+.saldoBTN {
+    width: 250px;
+}

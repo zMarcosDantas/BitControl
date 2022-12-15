@@ -1,0 +1,202 @@
+/* root */
+
+:root {
+    --primary: #a12ee0;
+    --secundary: #1cd1fd;
+}
+
+/* font faces */
+
+@font-face {
+    font-family: 'Optien';
+    src: url('fonts/Optien.eot');
+    src: local('Optien'),
+        url('fonts/Optien.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Optien.woff2') format('woff2'),
+        url('fonts/Optien.woff') format('woff'),
+        url('fonts/Optien.ttf') format('truetype'),
+        url('fonts/Optien.svg#Optien') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* tags */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, var(--primary) -124.32%, #000000 76.51%) no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    overflow: hidden;
+    background-size: cover;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 20vh 0;
+    height: 70vh;
+}
+
+/* id */
+
+#logoBC {
+    width: 102px;
+    height: 110px;
+    filter: drop-shadow(5px 5px 30px black);
+}
+
+#textBC {
+    font-family: 'Optien', sans-serif;
+    background: linear-gradient(var(--secundary), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+#subTitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+#loginBTN {
+    width: 150px;
+    transition: all 1s;
+    animation: btnAttetion 1s;
+}
+
+#loginBTN:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+#loginBTN > svg > path{
+    transition: all .5s;
+}
+
+
+#loginBTN:hover > svg > path{
+    stroke: white;
+    transition: all .5s;
+}
+
+#createAccBTN {
+    color: white;
+}
+
+/* classes */
+
+.btn-outline-primary {
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    color: #3375bb;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+
+.btn-outline-primary:active {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-outline-primary.disabled {
+    color: gray;
+    border: 1px solid gray;
+}
+
+.line {
+    height: 1px;
+    margin-top: -10px;
+    background-image: linear-gradient(to right, var(--primary), transparent);
+    width: 100%;
+    animation: lineCreator 10s;
+}
+
+.line-reverse {
+    height: 1px;
+    margin-top: -10px;
+    background-image: linear-gradient(to right, transparent, var(--primary));
+    width: 100%;
+    animation: lineCreator 10s;
+}
+
+/* keyframes */
+
+@keyframes btnAttetion {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lineCreator {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* media queries */
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    #logoBC {
+        width: 204px;
+        height: 220px;
+    }
+
+    main {
+        margin: 10vh 0;
+        height: 80vh;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #loginBTN {
+        width: 400px;
+    }
+
+    #logoBC {
+        width: 204px;
+        height: 220px;
+    }
+
+    main {
+        margin: 10vh 0;
+        height: 80vh;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

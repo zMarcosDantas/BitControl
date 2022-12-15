@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[BC] Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="d-flex d-column justify-content-center mt-3">
+        <div>
+            <h2>Gastos e Recebimentos</h2>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main class="container text-center">
+        
+        <div class="row position-relative">
+            <div class="col-6 col-sm-6">
+                <h3 id="entradasTitle">Entradas</h3>
+                <div class="line blue"></div>
+                <div id="entradasContent" class="content mt-2 mb-2">
+                    <p>Dia 12 - Lorem Ipsum</p>
+                    <p>Dia 20 - Lorem Ipsum</p>
+                    <p>Dia 22 - Lorem Ipsum</p>
+                    <p>Dia 30 - Lorem Ipsum</p>
+                </div>
+                <div class="line blue"></div>
+            </div>
+            <div class="col-6 col-sm-6">
+                <div>
+                    <h3 id="saidasTitle">Saídas</h3>
+                    <div class="line-reverse"></div>
+                    <div id="saidasContent" class="content mt-2 mb-2">
+                        <p>Dia 15 - Lorem Ipsum</p>
+                        <p>Dia 27 - Lorem Ipsum</p>
+                    </div>
+                    <div class="line-reverse"></div>
+                </div>
+                
+            </div>
+            <button id="verMaisBTN" class="btn btn-outline-primary disabled">Ver mais</div>
+        </div>
+
+        <section id="saldoCarteira" class="mt-5">
+            <p>Previsão de Saldo</p>
+            <div>
+                <i class="icon fa-solid fa-eye purple" aria-label="aberto" onclick="changeEye(this)"></i>
+                <i class="icon fa-solid fa-eye-slash purple d-none" aria-label="fechado" onclick="changeEye(this)"></i>
+                <h4 id="saldoTitle">R$25.000,00</h4>
+                <i class="icon fa-solid fa-angles-up green"></i>
+            </div>
+
+            <button class="saldoBTN btn btn-outline-primary d-block mx-auto mt-3 mb-2 white disabled">Adicionar Entradas</button>
+            <button class="saldoBTN btn btn-outline-primary d-block mx-auto white disabled">Adicionar Saídas</button>
+            
+            <div id="chartDiv" class="mx-auto position-relative mt-3">
+                <canvas id="chart"></canvas>
+            </div>
+            
+        </secion>
+    </main>
+
+    <footer>
+        <div class="container d-flex d-row justify-content-center">
+            <a class="mx-2">
+                <i class="fa-solid fa-piggy-bank disabled"></i>
+            </a>
+            <a class="mx-2">
+                <i class="fa-solid fa-wallet disabled"></i>
+            </a>
+            <a href="./dashboard.html" id="bc" class="mx-2 selected">
+                <img src="./assets/BC_Logo.svg" width="32" height="32">
+            </a>
+            <a class="mx-2">
+                <i class="fa-solid fa-chart-pie disabled"></i>
+            </a>
+            <a class="mx-2">
+                <i class="fa-solid fa-handshake-angle disabled"></i>
+            </a>
+
+        </div>
+    </footer>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"></script>
+    <script src="./js/dash.js"></script>
+</body>
+</html>

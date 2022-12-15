@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Optien';
+    src: url('fonts/Optien.eot');
+    src: local('Optien'),
+        url('fonts/Optien.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Optien.woff2') format('woff2'),
+        url('fonts/Optien.woff') format('woff'),
+        url('fonts/Optien.ttf') format('truetype'),
+        url('fonts/Optien.svg#Optien') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
